@@ -1,7 +1,7 @@
 import React from "react";
 import { Type } from "./text.constant";
-import { useAppContext } from "../../providers/app.provider";
 import { ButtonContextType } from "../../context/button.context";
+import { useAppContext } from "../../contextManager/ContextManager";
 
 interface TextStyle {
     textHtmlTag: Type;
@@ -13,7 +13,7 @@ interface TextStyle {
 
 export default function Text(textStyle: TextStyle) {
     const htagOrSize = textStyle.textHtmlTag;
-    const { text } = useAppContext<ButtonContextType>("buttonContext");
+    const { text } = useAppContext<ButtonContextType>("ButtonContext");
 
     return React.createElement(htagOrSize, {
         style: {

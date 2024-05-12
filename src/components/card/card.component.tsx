@@ -1,10 +1,10 @@
 import { TextContextType } from "../../context/text.context";
-import { useAppContext } from "../../providers/app.provider";
+import { useAppContext } from "../../contextManager/ContextManager";
 import Button from "../button/button.component";
 import { Type } from "../button/button.constant";
 
 export default function Card() {
-    const { setColor } = useAppContext<TextContextType>("textContext");
+    const { setColor } = useAppContext<TextContextType>("TextContext");
 
     const handleClick = () => {
         console.log("Card Clicked");

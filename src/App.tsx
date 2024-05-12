@@ -4,8 +4,8 @@ import Card from "./components/card/card.component";
 import Input from "./components/input/input.component";
 import Text from "./components/text/text.component";
 import { Type as TypeText } from "./components/text/text.constant";
-import { AppProvider } from "./providers/app.provider";
-import { Register } from "./Register";
+import { AppProvider } from "./contextManager/AppProvider";
+import { Register } from "./contextManager/Register";
 
 Register.init();
 

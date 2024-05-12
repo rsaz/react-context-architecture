@@ -1,9 +1,9 @@
 import React from "react";
-import "./button.style.scss";
-import { Type } from "./button.constant";
-import { useAppContext } from "../../providers/app.provider";
 import { ButtonContextType } from "../../context/button.context";
 import { TextContextType } from "../../context/text.context";
+import { useSelectiveContext } from "../../contextManager/ContextManager";
+import { Type } from "./button.constant";
+import "./button.style.scss";
 
 interface ButtonStyle {
     id?: string;
@@ -14,8 +14,13 @@ interface ButtonStyle {
 }
 
 export default function Button({ id, name, type, event, color = "#39ff14" }: ButtonStyle) {
-    const { setText } = useAppContext<ButtonContextType>("buttonContext");
-    const { setColor } = useAppContext<TextContextType>("textContext");
+    const { setText } = useSelectiveContext<ButtonContextType, "setText" | "text">(
+        "ButtonContext",
+        ["setText", "text"]
+    );
+    const { setColor } = useSelectiveContext<TextContextType, "setColor">("TextContext", [
+        "setColor",
+    ]);
 
     const handleClick = () => {
         setColor("red");
