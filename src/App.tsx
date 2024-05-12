@@ -5,6 +5,9 @@ import Input from "./components/input/input.component";
 import Text from "./components/text/text.component";
 import { Type as TypeText } from "./components/text/text.constant";
 import { AppProvider } from "./providers/app.provider";
+import { Register } from "./Register";
+
+Register.init();
 
 function App() {
     return (

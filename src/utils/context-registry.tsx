@@ -2,23 +2,21 @@
 import React from "react";
 
 class ContextRegistry {
-    private contexts: Record<string, React.Context<any>>;
-
-    constructor() {
-        this.contexts = {};
-    }
+    private contexts: Record<string, React.Context<any>> = {};
 
     register<T>(name: string, context: React.Context<T>) {
         this.contexts[name] = context;
     }
 
     unregister(name: string) {
+        if (!this.contexts[name]) throw new Error(`Context ${name} not found`);
         delete this.contexts[name];
     }
 
     getContext<T>(name: string): React.Context<T> {
-        if (!this.contexts[name]) throw new Error(`Context ${name} not found`);
-        return this.contexts[name];
+        const context = this.contexts[name];
+        if (!context) throw new Error(`Context ${name} not found`);
+        return context;
     }
 
     get Contexts(): Record<string, React.Context<any>> {
@@ -26,4 +24,4 @@ class ContextRegistry {
     }
 }
 
-export const contextRegistry = new ContextRegistry();
+export { ContextRegistry };
