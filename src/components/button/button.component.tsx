@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonContextType } from "../../context/button.context";
 import { TextContextType } from "../../context/text.context";
-import { useSelectiveContext } from "../../contextManager/ContextManager";
+import { useSelectiveContext } from "../../contextManager/hooks";
 import { Type } from "./button.constant";
 import "./button.style.scss";
 

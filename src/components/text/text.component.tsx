@@ -1,7 +1,7 @@
 import React from "react";
 import { Type } from "./text.constant";
 import { ButtonContextType } from "../../context/button.context";
-import { useAppContext } from "../../contextManager/ContextManager";
+import { useAppContext } from "../../contextManager/hooks";
 
 interface TextStyle {
     textHtmlTag: Type;

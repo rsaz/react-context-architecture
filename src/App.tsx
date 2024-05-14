@@ -5,7 +5,7 @@ import Input from "./components/input/input.component";
 import Text from "./components/text/text.component";
 import { Type as TypeText } from "./components/text/text.constant";
 import { AppProvider } from "./contextManager/AppProvider";
-import { Register } from "./contextManager/Register";
+import { Register } from "./contextManager/register";
 
 Register.init();
 

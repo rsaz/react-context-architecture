@@ -1,5 +1,5 @@
 import { TextContextType } from "../../context/text.context";
-import { useAppContext } from "../../contextManager/ContextManager";
+import { useAppContext } from "../../contextManager/hooks";
 
 export default function Input() {
     const { color } = useAppContext<TextContextType>("TextContext");

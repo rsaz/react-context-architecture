@@ -27,7 +27,7 @@
  */
 
 import React from "react";
-import { Register } from "./Register";
+import { Register } from "./register";
 
 /*
  * This hook will handle subscribing to the context and ensure that the component

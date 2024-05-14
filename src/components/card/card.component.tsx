@@ -1,5 +1,5 @@
 import { TextContextType } from "../../context/text.context";
-import { useAppContext } from "../../contextManager/ContextManager";
+import { useAppContext } from "../../contextManager/hooks";
 import Button from "../button/button.component";
 import { Type } from "../button/button.constant";
 

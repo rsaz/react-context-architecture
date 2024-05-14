@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
-class ContextRegistry {
+export class ContextRegistry {
     private contexts: Record<string, React.Context<any>> = {};
 
     register<T>(name: string, context: React.Context<T>) {
@@ -23,5 +23,3 @@ class ContextRegistry {
         return this.contexts;
     }
 }
-
-export { ContextRegistry };

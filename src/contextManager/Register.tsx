@@ -1,6 +1,6 @@
 import { ButtonContext } from "../context/button.context";
 import { TextContext } from "../context/text.context";
-import { ContextRegistry } from "./ContextRegistry";
+import { ContextRegistry } from "./contextRegistry";
 
 /*
  * Register all contexts here
